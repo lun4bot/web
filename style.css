@@ -1,22 +1,64 @@
-/* Reset & base */
-body, h1, h2, h3, p, ul, li {
+/* Reset & Base */
+body, h1, h2, h3, p, ul, li, nav, section {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #2a2a3f);
-    color: #f0f0f0;
     line-height: 1.6;
     text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Light Theme (Default) */
+body.light {
+    background: #f4f4f4;
+    color: #111;
+}
+body.light header {
+    background: #5865F2;
+}
+body.light section {
+    background: #e0e0e0;
+}
+body.light .feature {
+    background: #fff;
+}
+body.light #commands li {
+    background: #fff;
+}
+body.light footer {
+    background: #ccc;
+    color: #333;
+}
+
+/* Dark Theme */
+body.dark {
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3f);
+    color: #f0f0f0;
+}
+body.dark header {
+    background: #3a3a5c;
+}
+body.dark section {
+    background: #2a2a3f;
+}
+body.dark .feature {
+    background: #2a2a3f;
+}
+body.dark #commands li {
+    background: #2a2a3f;
+}
+body.dark footer {
+    background: #1a1a2a;
+    color: #aaa;
 }
 
 /* Header */
 header {
-    padding: 60px 20px;
-    background: #3a3a5c;
+    padding: 50px 20px;
+    position: relative;
 }
 header img {
     width: 120px;
@@ -31,28 +73,52 @@ header p {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
-.invite-btn {
+.invite-btn, #theme-toggle {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 12px 25px;
+    margin: 5px;
     background-color: #5865F2;
     color: #fff;
     text-decoration: none;
+    border: none;
     border-radius: 8px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
 }
-.invite-btn:hover {
+.invite-btn:hover, #theme-toggle:hover {
     background-color: #4752c4;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 20px 0;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Sections */
 section {
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 section h2 {
     font-size: 2.2em;
     margin-bottom: 30px;
-    color: #fff;
 }
+
+/* Feature Cards */
 .feature-list {
     display: flex;
     flex-wrap: wrap;
@@ -60,18 +126,16 @@ section h2 {
     gap: 20px;
 }
 .feature {
-    background: #2a2a3f;
     padding: 20px;
     border-radius: 10px;
     width: 250px;
 }
 
-/* Commands */
+/* Commands List */
 #commands ul {
     list-style: none;
 }
 #commands li {
-    background: #2a2a3f;
     margin: 10px auto;
     padding: 15px;
     border-radius: 8px;
@@ -80,11 +144,17 @@ section h2 {
 
 /* Footer */
 footer {
-    background: #1a1a2a;
     padding: 20px;
     margin-top: 40px;
 }
-footer p {
-    font-size: 0.9em;
-    color: #aaa;
+
+/* Mobile */
+@media(max-width:768px){
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    #commands li {
+        width: 90%;
+    }
 }
