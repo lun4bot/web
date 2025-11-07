@@ -7,3 +7,18 @@ document.getElementById("bot-logo").src = BOT_LOGO;
 // Set invite link (replace YOUR_CLIENT_ID)
 document.querySelector(".invite-btn").href = 
 `https://discord.com/oauth2/authorize?client_id=1436165650786812089&scope=bot&permissions=8`;
+
+// Dark/Light theme toggle
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+
+// Default theme
+body.classList.add("dark");
+
+toggleBtn.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+        body.classList.replace("dark", "light");
+    } else {
+        body.classList.replace("light", "dark");
+    }
+});
