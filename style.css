@@ -1,0 +1,90 @@
+/* Reset & base */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a3f);
+    color: #f0f0f0;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 60px 20px;
+    background: #3a3a5c;
+}
+header img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.invite-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #5865F2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.invite-btn:hover {
+    background-color: #4752c4;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+}
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.feature {
+    background: #2a2a3f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+/* Commands */
+#commands ul {
+    list-style: none;
+}
+#commands li {
+    background: #2a2a3f;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 8px;
+    width: 80%;
+}
+
+/* Footer */
+footer {
+    background: #1a1a2a;
+    padding: 20px;
+    margin-top: 40px;
+}
+footer p {
+    font-size: 0.9em;
+    color: #aaa;
+}
